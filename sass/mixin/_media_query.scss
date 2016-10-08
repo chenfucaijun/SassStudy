@@ -1,0 +1,38 @@
+// Defining values
+$screen-sm-min: 768px;
+$screen-xs-max: ($screen-sm-min - 1);
+$screen-md-min: 992px;
+$screen-sm-max: ($screen-md-min - 1);
+$screen-lg-min: 1200px;
+$screen-md-max: ($screen-lg-min - 1);
+
+$break-small: 320px;
+$break-large: 1024px;
+
+
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == "xsmall" {
+    @media (min-width: 320px) and (max-width: 766px){
+      @content;
+    }
+  }
+  @else if $breakpoint == "small" {
+    @media (min-width: 767px) and (max-width: 991px){
+      @content;
+    }
+  }
+
+  @else if $breakpoint == "medium" {
+    @media (min-width: 992px) and (max-width: 1199px){
+      @content;
+    }
+  }
+
+  @else if $breakpoint == "large" {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+}
+

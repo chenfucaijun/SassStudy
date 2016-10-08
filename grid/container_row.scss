@@ -1,0 +1,17 @@
+@import "variables";
+@import "mixin/clearfix";
+@import "mixin/grid";
+@import "mixin/grid-framework";
+@import "grid";
+
+//要想在非IE环境下单独调试栅格系统的源码,必须要将盒子模型设置为传统模型
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+

@@ -1,0 +1,34 @@
+@import "variables";
+@import "mixin/clearfix";
+@import '3_sections';
+@import '7_blocks_widgets';
+@import "container_row";
+
+
+body {
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $gray;
+  background-color: $body-bg;
+  font-weight: 300;
+}
+
+
+.page-wrapper{
+  background-color: $white;
+}
+
+.clearfix{
+  @include clearfix();
+}
+
+
+
+
+
+
+
+
+
+
+

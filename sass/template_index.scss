@@ -1,0 +1,1125 @@
+//颜色设置--------------------------
+$header-links-color: #ffffff;
+$background_color_dark: #2e3537;
+$background_color_blue: #2980B9;
+$background_color_green: #2ECC71;
+
+$background_color_header: #fcfcfc;
+
+//绿色
+$dark:#233842;
+$green:#2ECC71;
+$red:#E67E22;
+
+$dark_theme_color: #ffffff;
+$link_hover_color: #09afdf;
+
+//标语
+$header-slogan-color: #777777;
+$header-nav-color: #777;
+$header-nav-active-color: rgb(9, 175, 223);
+$header-nal-background-color: #09afdf;
+//字号和尺寸设置----------------------
+
+$font-family-sans-serif: Roboto, sans-serif !default;
+$font-family-real-serif: Raleway, sans-serif !default;
+
+$font-family-serif: Georgia, "Times New Roman", Times, serif !default;
+$font-family-monospace: Menlo, Monaco, Consolas, "Courier New", monospace !default;
+$font-family-base: $font-family-sans-serif !default;
+
+$font-header-slogan: $font-family-sans-serif;
+$fontsize-header-slogan: 12px;
+$fontweight-header-slogan: 18px;
+
+$font-family-nav: $font-family-real-serif;
+$fontsize-header-nav: 19px;
+
+
+
+
+//根据主题设置颜色,min-width:320px,手机端为主
+@mixin set-color-by-theme-xsmall($name,$background_color) {
+
+  .header-container.#{$name} {
+    background-color: $background_color;
+    font-size: 14px;
+    font-weight: 300;
+    color: $dark_theme_color;
+
+    //社交链接
+    //为移动端专门设置的样式
+    .mobile-style{
+      margin-top:15px;
+      width: 100%;
+      text-align: center;
+    }
+    .header-links {
+      margin:  0;
+      padding-right: 15px;
+      padding-left: 15px;
+      display: inline-block;
+      li {
+        display: inline-block;
+        color: darken($background_color, 10%);;
+        margin: 0 2px 2px 0;
+
+        a {
+          display: block;
+          text-align: center;
+          width: 30px;
+          height: 30px;
+          font-size: 14px;
+          background-color: darken($background_color, 10%);
+          border: 1px solid rgba(0, 0, 0, 0.1);
+          border-radius: 100%;
+          i {
+            line-height: 29px;
+            color: $header-links-color;
+          }
+
+          &:hover {
+            background-color: $link_hover_color;
+          }
+        }
+      }
+    }
+
+    //联系方式
+    .header-contacts {
+      margin: 0;
+      text-align: right;
+      display: block;
+      li {
+        display: none;
+        padding-left: 8px;
+        a {
+          text-decoration: none;
+          font-size: 14px;
+          color: $header-links-color;
+          i {
+            display: inline-block;
+            padding-right: 5px;
+
+            padding-left: 5px;
+          }
+        }
+
+      }
+
+    }
+    //头部开始
+    .header {
+      border-top: 1px solid #ffffff;
+      border-bottom: 2px solid #f1f1f1;
+      background-color: $background_color_header;
+      display: block;
+      //logo
+      .left-logo {
+        .logo{
+          display: none;
+        }
+        .slogan {
+          display: none;
+        }
+      }
+      //手机端导航
+      .mobile-style-nav{
+        width: 100%;
+      }
+      .right-nav {
+        //导航栏
+        .nav-ul {
+          width: 100%;
+          .nav-li-home,.nav-li-pages,.nav-li-feature,.nav-li-com{
+            display: none;
+          }
+          margin: 0;
+          font-size: $fontsize-header-nav;
+          list-style: none;
+          display: inline-block;
+          li {
+            display: inline-block;
+            a {
+              padding: 15px;
+              display: block;
+              text-decoration: none;
+              color: $header-nav-color;
+              &.active {
+                color: $header-nav-active-color;
+              }
+              &:hover {
+                color: darken($background_color,20%);
+                background-color: lighten($background_color, 20%);
+              }
+            }
+          }
+          .nav-li-shop,.nav-li-shop{
+            width: 50%;
+          }
+
+        }
+
+        //导航按钮
+        .nav-button {
+          display: none;
+          padding-left: 18px;
+        }
+
+      }
+    }
+    //头部结束
+
+    //广告语开始
+    .offer-text {
+      background-color: $background_color;
+      color: #cdcdcd;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      font-size: 18px;
+      .left-offer-text {
+        color: #ffffff;
+      }
+      .right-offer-button {
+        margin-top: 15px;
+        a {
+          text-decoration: none;
+        }
+      }
+
+    }
+    //广告语结束
+
+
+    //页脚开始
+    .footer {
+      p {
+        color: #777777;
+      }
+      border-top: 1px solid #ededed;
+      font-size: 14px;
+      line-height: 1.5;
+      padding: 40px 0;
+      background-color: white;
+      .footer-links {
+        margin: 5px 0;
+        padding-right: 15px;
+        padding-left: 15px;
+        display: inline-block;
+        li {
+          display: inline-block;
+          color: darken($background_color, 10%);;
+          margin: 0 2px 2px 0;
+
+          a {
+            display: block;
+            text-align: center;
+            width: 30px;
+            height: 30px;
+            font-size: 14px;
+            background-color: darken($background_color, 10%);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 100%;
+            i {
+              line-height: 29px;
+              color: $header-links-color;
+            }
+
+            &:hover {
+              background-color: $link_hover_color;
+            }
+          }
+        }
+      }
+
+
+      .footer-content {
+        text-align: center;
+      }
+    }
+    //页脚结束
+
+    //功能列表开始
+    .features-tables{
+      //#455a64
+      background-color: lighten($background_color,10%);
+      padding-bottom: 130px;
+      .feature-box{
+
+        transition: all .5s;
+        background: transparent;
+        padding: 40px 0 40px 0;
+        margin-bottom: 0px;
+        margin-top: 0px;
+        .feature-inner{
+          box-shadow: inset 0px 0px 0 10px #cecece;
+          border-bottom: 10px solid #cecece;
+          border-top: 10px solid #cecece;
+          transition: all .5s;
+          background: #fff;
+          padding: 20px;
+          margin: auto;
+          .features-icon{
+            border-radius: 0px;
+            text-align: center;
+            padding-top: 50px;
+            font-size: 56px;
+            @if($name=='dark'){
+              color: $dark;
+            }@else if($name=='blue'){
+              color: $green;
+
+            }@else if($name=='green'){
+              color: $red;
+            }
+
+          }
+
+          p{
+            color: #333;
+            padding-bottom: 30px;
+            text-align: center;
+            max-width: 250px;
+            min-height: 260px;
+            line-height: 32px;
+            padding-top: 30px;
+            font-size: 18px;
+            margin: auto;
+          }
+        }
+      }
+
+    }
+    //功能列表结束
+
+  }
+
+}
+
+
+
+//根据主题设置颜色,min-width:767px
+@mixin set-color-by-theme-small($name,$background_color) {
+
+  .header-container.#{$name} {
+    background-color: $background_color;
+    font-size: 14px;
+    font-weight: 300;
+    color: $dark_theme_color;
+
+    .header-links {
+      margin: 5px 0;
+      padding-right: 15px;
+      padding-left: 15px;
+      display: inline-block;
+      li {
+        display: inline-block;
+        color: darken($background_color, 10%);;
+        margin: 0 2px 2px 0;
+
+        a {
+          display: block;
+          text-align: center;
+          width: 30px;
+          height: 30px;
+          font-size: 14px;
+          background-color: darken($background_color, 10%);
+          border: 1px solid rgba(0, 0, 0, 0.1);
+          border-radius: 100%;
+          i {
+            line-height: 29px;
+            color: $header-links-color;
+          }
+
+          &:hover {
+            background-color: $link_hover_color;
+          }
+        }
+      }
+    }
+
+    //联系方式
+    .header-contacts {
+      margin: 0;
+      text-align: right;
+      display: block;
+      li {
+        display: inline-block;
+        padding-left: 8px;
+        a {
+          text-decoration: none;
+          font-size: 14px;
+          color: $header-links-color;
+          i {
+            display: inline-block;
+            padding-right: 5px;
+
+            padding-left: 5px;
+          }
+        }
+
+      }
+
+    }
+    //头部开始
+    .header {
+      border-top: 1px solid #ffffff;
+      border-bottom: 2px solid #f1f1f1;
+      background-color: $background_color_header;
+      display: block;
+      //logo
+      .left-logo {
+        .logo{
+          display: none;
+        }
+        .slogan {
+          display: none;
+        }
+      }
+      .right-nav {
+        //导航栏
+        .nav-ul {
+          .nav-li-home{
+            display: none;
+          }
+
+          margin: 0;
+          font-size: $fontsize-header-nav;
+          list-style: none;
+          display: inline-block;
+          li {
+            display: inline-block;
+            a {
+              padding: 28px 15px 27px 15px;
+              display: block;
+              text-decoration: none;
+              color: $header-nav-color;
+              &.active {
+                color: $header-nav-active-color;
+              }
+              &:hover {
+                color: darken($background_color,20%);
+                background-color: lighten($background_color, 20%);
+              }
+            }
+          }
+        }
+
+        //导航按钮
+        .nav-button {
+          display: none;
+          padding-left: 18px;
+        }
+
+      }
+    }
+    //头部结束
+
+    //广告语开始
+    .offer-text {
+      background-color: $background_color;
+      color: #cdcdcd;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      font-size: 24px;
+      .left-offer-text {
+        color: #ffffff;
+      }
+      .right-offer-button {
+        margin-top: 20px;
+        a {
+          text-decoration: none;
+        }
+      }
+
+    }
+    //广告语结束
+
+
+    //页脚开始
+    .footer {
+      p {
+        color: #777777;
+      }
+      border-top: 1px solid #ededed;
+      font-size: 14px;
+      line-height: 1.5;
+      padding: 40px 0;
+      background-color: white;
+      .footer-links {
+        margin: 5px 0;
+        padding-right: 15px;
+        padding-left: 15px;
+        display: inline-block;
+        li {
+          display: inline-block;
+          color: darken($background_color, 10%);;
+          margin: 0 2px 2px 0;
+
+          a {
+            display: block;
+            text-align: center;
+            width: 30px;
+            height: 30px;
+            font-size: 14px;
+            background-color: darken($background_color, 10%);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 100%;
+            i {
+              line-height: 29px;
+              color: $header-links-color;
+            }
+
+            &:hover {
+              background-color: $link_hover_color;
+            }
+          }
+        }
+      }
+
+
+      .footer-content {
+        text-align: center;
+      }
+    }
+    //页脚结束
+
+    //功能列表开始
+    .features-tables{
+      //#455a64
+      background-color: lighten($background_color,10%);
+      padding-bottom: 130px;
+      .feature-box{
+
+        transition: all .5s;
+        background: transparent;
+        padding: 40px 0 40px 0;
+        margin-bottom: 0px;
+        margin-top: 0px;
+        .feature-inner{
+          box-shadow: inset 0px 0px 0 10px #cecece;
+          border-bottom: 10px solid #cecece;
+          border-top: 10px solid #cecece;
+          transition: all .5s;
+          background: #fff;
+          padding: 20px;
+          margin: auto;
+          .features-icon{
+            border-radius: 0px;
+            text-align: center;
+            padding-top: 50px;
+            font-size: 56px;
+            @if($name=='dark'){
+              color: $dark;
+            }@else if($name=='blue'){
+              color: $green;
+
+            }@else if($name=='green'){
+              color: $red;
+            }
+
+          }
+
+          p{
+            color: #333;
+            padding-bottom: 30px;
+            text-align: center;
+            max-width: 250px;
+            min-height: 260px;
+            line-height: 32px;
+            padding-top: 30px;
+            font-size: 18px;
+            margin: auto;
+          }
+        }
+      }
+
+    }
+    //功能列表结束
+
+  }
+
+}
+
+
+//根据主题设置颜色,min-width:1200px
+@mixin set-color-by-theme($name,$background_color) {
+
+  .header-container.#{$name} {
+    background-color: $background_color;
+    font-size: 14px;
+    font-weight: 300;
+    color: $dark_theme_color;
+
+    //社交链接
+    .header-links {
+      margin: 5px 0;
+      padding-right: 15px;
+      padding-left: 15px;
+      display: inline-block;
+      li {
+        display: inline-block;
+        color: darken($background_color, 10%);;
+        margin: 0 2px 2px 0;
+
+        a {
+          display: block;
+          text-align: center;
+          width: 30px;
+          height: 30px;
+          font-size: 14px;
+          background-color: darken($background_color, 10%);
+          border: 1px solid rgba(0, 0, 0, 0.1);
+          border-radius: 100%;
+          i {
+            line-height: 29px;
+            color: $header-links-color;
+          }
+
+          &:hover {
+            background-color: $link_hover_color;
+          }
+        }
+      }
+    }
+
+    //联系方式
+    .header-contacts {
+      margin: 0;
+      text-align: right;
+      display: block;
+      li {
+        display: inline-block;
+        padding-left: 8px;
+        a {
+          text-decoration: none;
+          font-size: 14px;
+          color: $header-links-color;
+          i {
+            display: inline-block;
+            padding-right: 5px;
+
+            padding-left: 5px;
+          }
+        }
+
+      }
+
+    }
+    //头部开始
+    .header {
+      border-top: 1px solid #ffffff;
+      border-bottom: 2px solid #f1f1f1;
+      background-color: $background_color_header;
+      display: block;
+      //logo:1200px要显示logo
+      .left-logo {
+        .logo{
+          display: block;
+        }
+        .slogan {
+          display: inline-block;
+          font-family: $font-header-slogan;
+          font-size: $fontsize-header-slogan;
+          color: $header-slogan-color;
+          padding: 3px 0 0;
+          font-weight: 300;
+        }
+      }
+      .right-nav {
+        //导航栏
+        .nav-ul {
+          //1200px要显示home
+          .nav-li-home{
+            display: inherit;
+          }
+          //logo
+          .left-logo {
+            .logo{
+              display: inline-block;
+            }
+            .slogan {
+              display: block;
+            }
+          }
+          .nav-button {
+            //1200px要显示联系按钮
+            display: inherit;
+            padding-left: 18px;
+          }
+          margin: 0;
+          font-size: $fontsize-header-nav;
+          list-style: none;
+          display: inline-block;
+          li {
+            display: inline-block;
+            a {
+              padding: 28px 15px 27px 15px;
+              display: block;
+              text-decoration: none;
+              color: $header-nav-color;
+              &.active {
+                color: $header-nav-active-color;
+              }
+              &:hover {
+                color: darken($background_color,20%);
+                background-color: lighten($background_color, 20%);
+              }
+            }
+          }
+        }
+
+        //导航按钮
+        .nav-button {
+          display: inline-block;
+          padding-left: 18px;
+        }
+
+      }
+    }
+    //头部结束
+
+    //广告语开始
+    .offer-text {
+      background-color: $background_color;
+      color: #cdcdcd;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      font-size: 24px;
+      .left-offer-text {
+        color: #ffffff;
+      }
+      .right-offer-button {
+        margin-top: 20px;
+        a {
+          text-decoration: none;
+        }
+      }
+
+    }
+    //广告语结束
+
+
+    //页脚开始
+    .footer {
+      p {
+        color: #777777;
+      }
+      border-top: 1px solid #ededed;
+      font-size: 14px;
+      line-height: 1.5;
+      padding: 40px 0;
+      background-color: white;
+      .footer-links {
+        margin: 5px 0;
+        padding-right: 15px;
+        padding-left: 15px;
+        display: inline-block;
+        li {
+          display: inline-block;
+          color: darken($background_color, 10%);;
+          margin: 0 2px 2px 0;
+
+          a {
+            display: block;
+            text-align: center;
+            width: 30px;
+            height: 30px;
+            font-size: 14px;
+            background-color: darken($background_color, 10%);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 100%;
+            i {
+              line-height: 29px;
+              color: $header-links-color;
+            }
+
+            &:hover {
+              background-color: $link_hover_color;
+            }
+          }
+        }
+      }
+
+
+      .footer-content {
+        text-align: center;
+      }
+    }
+    //页脚结束
+
+    //功能列表开始
+    .features-tables{
+      //#455a64
+      background-color: lighten($background_color,10%);
+      padding-bottom: 130px;
+      .feature-box{
+
+        transition: all .5s;
+        background: transparent;
+        padding: 40px 0 40px 0;
+        margin-bottom: 0px;
+        margin-top: 0px;
+        .feature-inner{
+          box-shadow: inset 0px 0px 0 10px #cecece;
+          border-bottom: 10px solid #cecece;
+          border-top: 10px solid #cecece;
+          transition: all .5s;
+          background: #fff;
+          padding: 20px;
+          margin: auto;
+          .features-icon{
+            border-radius: 0px;
+            text-align: center;
+            padding-top: 50px;
+            font-size: 56px;
+            @if($name=='dark'){
+              color: $dark;
+            }@else if($name=='blue'){
+              color: $green;
+
+            }@else if($name=='green'){
+              color: $red;
+            }
+
+          }
+
+          p{
+            color: #333;
+            padding-bottom: 30px;
+            text-align: center;
+            max-width: 250px;
+            min-height: 260px;
+            line-height: 32px;
+            padding-top: 30px;
+            font-size: 18px;
+            margin: auto;
+          }
+        }
+      }
+
+    }
+    //功能列表结束
+
+  }
+
+}
+
+
+
+//根据主题设置颜色,min-width:992px
+@mixin set-color-by-theme-medium($name,$background_color) {
+
+  .header-container.#{$name} {
+    background-color: $background_color;
+    font-size: 14px;
+    font-weight: 300;
+    color: $dark_theme_color;
+
+    //社交链接
+    .header-links {
+      margin: 5px 0;
+      padding-right: 15px;
+      padding-left: 15px;
+      display: inline-block;
+      li {
+        display: inline-block;
+        color: darken($background_color, 10%);;
+        margin: 0 2px 2px 0;
+
+        a {
+          display: block;
+          text-align: center;
+          width: 30px;
+          height: 30px;
+          font-size: 14px;
+          background-color: darken($background_color, 10%);
+          border: 1px solid rgba(0, 0, 0, 0.1);
+          border-radius: 100%;
+          i {
+            line-height: 29px;
+            color: $header-links-color;
+          }
+
+          &:hover {
+            background-color: $link_hover_color;
+          }
+        }
+      }
+    }
+
+    //联系方式
+    .header-contacts {
+      margin: 0;
+      text-align: right;
+      display: block;
+      li {
+        display: inline-block;
+        padding-left: 8px;
+        a {
+          text-decoration: none;
+          font-size: 14px;
+          color: $header-links-color;
+          i {
+            display: inline-block;
+            padding-right: 5px;
+
+            padding-left: 5px;
+          }
+        }
+
+      }
+
+    }
+    //头部开始
+    .header {
+      border-top: 1px solid #ffffff;
+      border-bottom: 2px solid #f1f1f1;
+      background-color: $background_color_header;
+      display: block;
+      //logo
+      .left-logo {
+        //972px要显示logo
+        .logo{
+          display: block;
+        }
+        .slogan {
+          display: inline-block;
+          font-family: $font-header-slogan;
+          font-size: $fontsize-header-slogan;
+          color: $header-slogan-color;
+          padding: 3px 0 0;
+          font-weight: 300;
+        }
+      }
+      .right-nav {
+        //导航栏
+        .nav-ul {
+          .nav-li-home{
+            display: none;
+          }
+          margin: 0;
+          font-size: $fontsize-header-nav;
+          list-style: none;
+          display: inline-block;
+          li {
+            display: inline-block;
+            a {
+              padding: 28px 15px 27px 15px;
+              display: block;
+              text-decoration: none;
+              color: $header-nav-color;
+              &.active {
+                color: $header-nav-active-color;
+              }
+              &:hover {
+                color: darken($background_color,20%);
+                background-color: lighten($background_color, 20%);
+              }
+            }
+          }
+        }
+
+        //导航按钮
+        .nav-button {
+          display: none;
+          padding-left: 18px;
+        }
+
+      }
+    }
+    //头部结束
+
+    //广告语开始
+    .offer-text {
+      background-color: $background_color;
+      color: #cdcdcd;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      font-size: 24px;
+      .left-offer-text {
+        color: #ffffff;
+      }
+      .right-offer-button {
+        margin-top: 20px;
+        a {
+          text-decoration: none;
+        }
+      }
+
+    }
+    //广告语结束
+
+
+    //页脚开始
+    .footer {
+      p {
+        color: #777777;
+      }
+      border-top: 1px solid #ededed;
+      font-size: 14px;
+      line-height: 1.5;
+      padding: 40px 0;
+      background-color: white;
+      .footer-links {
+        margin: 5px 0;
+        padding-right: 15px;
+        padding-left: 15px;
+        display: inline-block;
+        li {
+          display: inline-block;
+          color: darken($background_color, 10%);;
+          margin: 0 2px 2px 0;
+
+          a {
+            display: block;
+            text-align: center;
+            width: 30px;
+            height: 30px;
+            font-size: 14px;
+            background-color: darken($background_color, 10%);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 100%;
+            i {
+              line-height: 29px;
+              color: $header-links-color;
+            }
+
+            &:hover {
+              background-color: $link_hover_color;
+            }
+          }
+        }
+      }
+
+
+      .footer-content {
+        text-align: center;
+      }
+    }
+    //页脚结束
+
+    //功能列表开始
+    .features-tables{
+      //#455a64
+      background-color: lighten($background_color,10%);
+      padding-bottom: 130px;
+      .feature-box{
+
+        transition: all .5s;
+        background: transparent;
+        padding: 40px 0 40px 0;
+        margin-bottom: 0px;
+        margin-top: 0px;
+        .feature-inner{
+          box-shadow: inset 0px 0px 0 10px #cecece;
+          border-bottom: 10px solid #cecece;
+          border-top: 10px solid #cecece;
+          transition: all .5s;
+          background: #fff;
+          padding: 20px;
+          margin: auto;
+          .features-icon{
+            border-radius: 0px;
+            text-align: center;
+            padding-top: 50px;
+            font-size: 56px;
+            @if($name=='dark'){
+              color: $dark;
+            }@else if($name=='blue'){
+              color: $green;
+
+            }@else if($name=='green'){
+              color: $red;
+            }
+
+          }
+
+          p{
+            color: #333;
+            padding-bottom: 30px;
+            text-align: center;
+            max-width: 250px;
+            min-height: 260px;
+            line-height: 32px;
+            padding-top: 30px;
+            font-size: 18px;
+            margin: auto;
+          }
+        }
+      }
+
+    }
+    //功能列表结束
+
+  }
+
+}
+
+
+
+//引入清除浮动
+@import "mixin/clearfix";
+//引入媒体查询
+@import "mixin/media_query";
+
+
+//设置媒体查询
+
+//320px以上x
+@include respond-to(xsmall){
+  @include set-color-by-theme-xsmall('dark', $background_color_dark);
+  @include set-color-by-theme-xsmall('blue', $background_color_blue);
+  @include set-color-by-theme-xsmall('green', $background_color_green);
+}
+
+//767px及以上
+@include respond-to(small){
+  @include set-color-by-theme-small('dark', $background_color_dark);
+  @include set-color-by-theme-small('blue', $background_color_blue);
+  @include set-color-by-theme-small('green', $background_color_green);
+}
+//
+////992px及以上
+@include respond-to(medium){
+  @include set-color-by-theme-medium('dark', $background_color_dark);
+  @include set-color-by-theme-medium('blue', $background_color_blue);
+  @include set-color-by-theme-medium('green', $background_color_green);
+}
+
+
+//1200px及以上
+@include respond-to(large){
+  @include set-color-by-theme('dark', $background_color_dark);
+  @include set-color-by-theme('blue', $background_color_blue);
+  @include set-color-by-theme('green', $background_color_green);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

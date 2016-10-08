@@ -1,0 +1,21 @@
+@import "mixins";
+
+
+/* 2- Layout
+-------------------------------------------------
+-------------------------------------------------*/
+.header-top.dark {
+  background-color: #2e3537;
+  border-bottom: 1px solid #252a2c;
+}
+
+.header.dark {
+  background-color: #394245;
+  border-top-color: #394245;
+}
+
+.header-top.colored {
+  background-color: #09afdf;
+  border-bottom: 1px solid #09afdf;
+}
+

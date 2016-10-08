@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="js/vendor/owl.carousel.2.1.0/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="js/vendor/owl.carousel.2.1.0/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="grid/css/grid.css">
+    <link rel="stylesheet" href="button/css/button.css">
+    <!--主页面样式template_index.css-->
+    <link rel="stylesheet" href="sass/css/template_index.css">
+
+    <title>Document</title>
+
+
+    <!--style只设置颜色选择器,无任何其他dom元素样式-->
+    <style>
+            .style-switcher{
+                background-color: #fff;
+                color: #262626;
+                width: 225px;
+                position: fixed;
+                top: 140px;
+                z-index: 1002;
+                left: -227px;
+                border-radius: 0 10px 0 0;
+            }
+
+            div.style-switcher .header {
+                padding: 9px 15px;
+                background: #f1f1f1;
+                z-index: 2;
+                position: relative;
+                border: 1px solid #e1e1e1;
+                height: 38px;
+                color: #fff;
+            }
+            div.style-switcher a.trigger {
+                display: block;
+                height: 36px;
+                position: absolute;
+                right: -36px;
+                top: 0px;
+                background: #f1f1f1;
+                width: 36px;
+                font-size: 18px;
+                line-height: 35px;
+                color: #777777;
+                text-align: center;
+                text-decoration: none;
+                border: 1px solid #e1e1e1;
+                border-left: none;
+                border-radius: 0 5px 5px 0;
+            }
+
+        .style-switcher h2:hover{
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+<div class="header-container green" style="width: 100%">
+
+    <!--链接,联系栏-->
+    <div class="header-top ">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-2 col-sm-5 mobile-style">
+                    <!--第一部分-->
+                    <ul class="header-links">
+                        <li><a href="#"><i class="fa fa-qq"></i></a></li>
+                        <li><a href="#"><i class="fa fa-wechat"></i></a></li>
+                        <li><a href="#"><i class="fa fa-weibo"></i></a></li>
+
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-7">
+                    <!--第二部分-->
+                    <div class="header-contacts ">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-phone"></i>8888-8888-8888</a></li>
+                            <li><a href="#"><i class="fa fa-envelope-o"></i>tom@163.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--header start-->
+    <div class="header">
+        <div class="container">
+            <div class="row">
+
+                <!--logo图片-->
+                <div class="col-md-3">
+                    <div class="left-logo">
+                        <div class="logo">
+                            <img id="logo_img" src="img/mooe.png" alt="MOOE">
+
+                        </div>
+                        <div class="slogan">
+                            M O O E
+                        </div>
+                    </div>
+                </div>
+
+                <!--导航栏-->
+                <div class="col-md-9 mobile-style-nav">
+                    <div class="right-nav">
+                        <ul class="nav-ul ">
+                            <li class="nav-li-home"><a href="">Home <i class="fa fa-angle-down"></i></a></li>
+                            <li class="nav-li-pages"><a href="">Pages <i class="fa fa-angle-down"></i></a></li>
+                            <li class="nav-li-feature"><a href="">Features<i class="fa fa-angle-down"></i></a></li>
+                            <li class="nav-li-com"><a href="">Components<i class="fa fa-angle-down"></i></a></li>
+                            <li class="nav-li-shop"><a href="">Shop<i class="fa fa-angle-down"></i></a></li>
+                            <li class="nav-li-blog"><a href="">Blog<i class="fa fa-angle-down"></i></a></li>
+                        </ul>
+                        <div class="nav-button">
+                            <div class="btn btn-primary">Contact Us</div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+    <!--header end-->
+
+
+    <!--轮播 start-->
+    <div class="banner">
+        <div class="owl-carousel owl-theme">
+            <!-- Carousel items -->
+            <div class="item">
+                <img src="img/slide1.jpg" alt="2015">
+            </div>
+
+            <div class="item">
+                <img src="img/slide2.jpg" alt="2015">
+            </div>
+        </div>
+    </div>
+    <!--轮播 end-->
+
+
+    <!--广告标语-->
+    <div class="offer-text">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-sm-8 left-offer-text">
+                            <div class="left-offer-text">
+                                <h3>We offer more possibilities to meet your every need</h3>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 right-offer-button">
+                            <a href="#" class="btn btn-lg btn-primary ">Learn More<i class="fa fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--功能列表-->
+    <section class="features-tables">
+        <div class="container-fluid">
+            <div class="col-sm-12">
+                <div class="col-sm-6 col-lg-3 feature-box">
+                    <div class="feature-inner">
+                        <div class="features-icon">
+                            <i class="fa fa-music"></i>
+                        </div>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3 feature-box">
+                    <div class="feature-inner">
+                        <div class="features-icon">
+                            <i class="fa fa-pagelines"></i>
+                        </div>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3 feature-box">
+                    <div class="feature-inner">
+                        <div class="features-icon">
+                            <i class="fa fa-cloud"></i>
+                        </div>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3 feature-box">
+                    <div class="feature-inner">
+                        <div class="features-icon">
+                            <i class="fa fa-desktop"></i>
+                        </div>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--功能列表结束-->
+
+
+    <!--页脚-->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-content">
+                    <div class="logo-footer"><img id="logo-footer" class="center-block" src="img/mooe.png" alt=""></div>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus illo vel dolorum soluta
+                        consectetur doloribus sit. Delectus non tenetur odit dicta vitae debitis suscipit doloribus.
+                        Lorem ipsum dolor sit amet, illo vel dolorum soluta consectetur.
+                    </p>
+
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fa fa-qq"></i></a></li>
+                        <li><a href="#"><i class="fa fa-wechat"></i></a></li>
+                        <li><a href="#"><i class="fa fa-weibo"></i></a></li>
+
+                    </ul>
+
+                    <p>Copyright © 2016 The Project by ChenLei . All Rights Reserved</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<!--颜色选择器-->
+<div class="style-switcher closed">
+    <div class="header">
+        <a class="trigger" href="#"><i class="fa fa-gear"></i></a>
+        <h2 class="dark-switch" style="background-color: #2e3537;margin-top:36px; border-radius: 6px">
+            dark
+        </h2>
+        <h2 class="blue-switch" style="background-color: #2980B9;border-radius: 6px">
+            blue
+        </h2>
+        <h2 class="green-switch" style="background-color: #2ECC71;border-radius: 6px">
+            green
+        </h2>
+
+    </div>
+
+</div>
+
+<!--引入jquery-->
+<script src="js/jquery.min.js"></script>
+<!--图片轮播插件-->
+<script src="js/vendor/owl.carousel.2.1.0/owl.carousel.min.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
