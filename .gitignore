@@ -4,3 +4,5 @@
 *.iml
 
 *.scssc
+
+.DS_Store
