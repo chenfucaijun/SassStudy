@@ -11,3 +11,6 @@
 [Bootstrap栅格系统和Button源码剖析](./BootstrapCodeAnalysis.md)
 
 
+## License
+See the [LICENSE](./LICENSE.md) file for license rights and limitations (MIT).
+
