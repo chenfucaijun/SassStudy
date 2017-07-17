@@ -1,4 +1,4 @@
-# 从前端小白到分析前端框架
+# 从前端小白到分析前端框架(UI部分)
 >聊一聊前端之————————————样式！
 >我们很多人C++，php代码写的很好，但是，前端样式有时候真的写的惨不忍睹，为什么？
 >原因绝对不是学习能力，编程能力。
@@ -95,7 +95,7 @@
 ![float3](http://p1.bqimg.com/576036/5c42d069bedca0e4.png)
 
 
-*浮动出现的问题(盒子坍塌)
+* 浮动出现的问题(盒子坍塌)
 ```
 <div class="outer">
     <div class="div1">1</div>
@@ -169,7 +169,7 @@ body{background:#000;}
 
 -------
 
-##SASS
+## SASS
 >**啥是SASS?**
 > **SASS**：Syntactically Awesome Style Sheets，语法极好的一种样式表。
 > Sass 是一个 CSS 的扩展，它在 CSS 语法的基础上，允许您**使用变量 (variables), 嵌套规则 (nested rules), 混合 (mixins), 导入 (inline imports) 等功能**，令 CSS 更加强大与优雅。使用 Sass 以及 [Compass](http://www.ruanyifeng.com/blog/2012/11/compass.html)样式库有助于更好地组织管理样式文件，以及更高效地开发项目。
@@ -177,7 +177,7 @@ body{background:#000;}
 
 
 
-##安装SASS环境
+## 安装SASS环境
 * [Sass官网](http://sass-lang.com/install)
 * Linux环境下首先安装ruby,然后通过包管理器安装`sass`
 	```
@@ -191,7 +191,7 @@ body{background:#000;}
 
 
 
-##SASS基本命令
+## SASS基本命令
 * 执行sass命令，预处理scss文件，生成css文件
 	```
 	sass --watch input.scss:output.css //	预处理input.scss生成output.css文件
@@ -207,7 +207,7 @@ sass --watch app/sass:public/stylesheets
 
 
 
-##SCSS基本语法
+## SCSS基本语法
 *  **变量$**
 
 ```
@@ -428,7 +428,7 @@ sass --watch scss/:css/
 
 
 
-##bootstrap---按钮源码分析
+## bootstrap---按钮源码分析
 
 
 * 首先使用**纯css**来生成一下button，对应的代码在 [button分析.html](https://github.com/chencaijun1992/SassStydy/blob/master/button%E5%88%86%E6%9E%90.html)中，在查看效果的时候要先注释掉button.scss生成的样式
@@ -675,7 +675,7 @@ $btn-mine-border:    darken($btn-mine-bg, 5%) !default;  //边框色
 
 
 
-##BOOTSTRAP---栅格系统源码分析
+## BOOTSTRAP---栅格系统源码分析
 
 
 * [简单的使用bootstrap的栅格系统](http://v3.bootcss.com/css/#grid)
